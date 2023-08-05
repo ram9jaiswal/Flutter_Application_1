@@ -4,6 +4,8 @@ import 'package:flutter_application_1/auth/signup_screen.dart';
 import 'package:flutter_application_1/user_profile/profile_screen.dart';
 import 'package:flutter_application_1/utils/utils.dart';
 
+import 'forgot_password_screen.dart';
+
 class LogInScreen extends StatefulWidget {
   const LogInScreen({super.key});
 
@@ -119,7 +121,14 @@ class _LogInScreenState extends State<LogInScreen> {
                           const Text("Accept Tearms And Conditions"),
                           const Spacer(),
                           TextButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          const ForgotPasswordScreen(),
+                                    ));
+                              },
                               child: const Text("Forgot Passward?")),
                         ],
                       ),
